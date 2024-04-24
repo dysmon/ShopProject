@@ -1,5 +1,5 @@
 # Description
-This is our Web side of online furniture store.
+This is our Web site of online furniture store.
 
 
 #Team
