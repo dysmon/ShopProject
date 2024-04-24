@@ -1,0 +1,32 @@
+<div class="current" *ngIf="furniture">
+  <span>Home</span> > <span>Shop</span> | {{ furniture.name }}
+</div>
+
+<section class="product" *ngIf="furniture">
+  <div class="img">
+    <img [src]="furniture.image" alt="image" />
+  </div>
+  <div class="detail">
+    <div class="name">{{ furniture.name }}</div>
+    <div class="price">{{ furniture.price }}$</div>
+    <div class="star"><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+    <h2>Description:</h2>
+    <div class="descr">{{ furniture.description }}</div>
+    <h3>Material:</h3>
+    <div class="material">{{ furniture.material }}</div>
+    <button (click)="saveProductToSessionStorage(furniture)" class="cart">Add To Cart</button>
+    <hr />
+    <div class="manufacturer">
+      <span>Manufacturer</span>: {{ furniture.manufacturer }}
+    </div>
+    <div class="category">
+      <span>Category</span>: {{ categories[furniture.category - 1].name }}
+    </div>
+    <div class="height"><span>Height</span>: {{ furniture.height }}</div>
+    <div class="width"><span>Width</span>: {{ furniture.width }}</div>
+  </div>
+</section>
+
+<div *ngIf="!furniture">
+  <h1>Not Found</h1>
+</div>

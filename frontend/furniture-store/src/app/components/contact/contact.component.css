@@ -1,0 +1,142 @@
+.contact .current-page {
+  background: url(../../../assets/shop_bg.jpg) center center/cover no-repeat;
+  height: 316px;
+  color: #000;
+  padding-top: 60px;
+}
+
+.current-page img {
+  display: block;
+  margin: 0 auto;
+}
+.current-page h1 {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.current-page h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.service {
+  padding: 98px 191px 63px;
+  color: #000;
+}
+
+.service .title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.service .title_descr {
+  margin: 0 auto;
+  width: 644px;
+  color: #9f9f9f;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.service .flex-wrapper {
+  margin-top: 80px;
+  display: flex;
+}
+
+.service .flex-item-1 {
+  padding: 60px;
+  width: 40%;
+}
+
+.service .flex-item-1 > div {
+  display: flex;
+}
+
+.service .flex-item-1 img {
+  min-width: 25px;
+  margin-right: 30px;
+  align-self: baseline;
+}
+
+.service .flex-item-1 h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.service .flex-item-1 p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.service .phone {
+  margin-top: 42px;
+}
+
+.service .phone img {
+  margin-right: 25px;
+}
+.service .worktime {
+  margin-top: 42px;
+}
+
+.service .flex-item-2 {
+  width: 65%;
+}
+
+.service form {
+  padding-left: 75px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service label {
+  margin: 20px 0 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.service input {
+  padding: 20px 30px;
+  height: 65px;
+  width: 575px;
+  border-radius: 10px;
+  border: 1px solid #9f9f9f;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.service textarea {
+  padding: 25px 30px;
+  width: 575px;
+  height: 120px;
+  border-radius: 10px;
+  border: 1px solid #9f9f9f;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.service button {
+  color: #fff;
+  margin-top: 49px;
+  width: 237px;
+  height: 55px;
+  border-radius: 5px;
+  border: 1px solid #b88e2f;
+  background-color: #b88e2f;
+}
+
+.service button:hover {
+  cursor: pointer;
+}
+
+.service button:active {
+  transform: scale(0.9);
+  transition-duration: 0.4s;
+}
+
+.alert {
+  color: red;
+}

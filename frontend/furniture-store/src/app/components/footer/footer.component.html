@@ -1,0 +1,54 @@
+<footer>
+  <div class="flex-wrapper">
+    <div class="about">
+      <h2 class="title">Funiro.</h2>
+      <div class="address">
+        400 University Drive Suite 200 Coral Gables,
+        <br />
+        FL 33134 USA
+      </div>
+    </div>
+    <div class="links">
+      <h3>Links</h3>
+      <ul>
+        <li><a [routerLink]="['/home']">Home</a></li>
+        <li><a [routerLink]="['/furniture']">Shop</a></li>
+        <li><a [routerLink]="['/about']">About</a></li>
+        <li><a [routerLink]="['/contact']">Contact</a></li>
+      </ul>
+    </div>
+    <div class="help">
+      <h3>Help</h3>
+      <ul>
+        <li><a [routerLink]="['/']">Payment Options</a></li>
+        <li><a [routerLink]="['/']">Returns</a></li>
+        <li><a [routerLink]="['/']">Privacy Policies</a></li>
+      </ul>
+    </div>
+    <div class="newsletter">
+      <h3>Newsletter</h3>
+      <form #newsletter="ngForm" (ngSubmit)="sendEmail(formData)">
+        <input
+          type="email"
+          name="email"
+          required
+          ngModel
+          email="true"
+          placeholder="example@gmail.com"
+          [(ngModel)]="formData.email"
+          #email="ngModel"
+        />
+        <button type="submit" [disabled]="newsletter.invalid">subscribe</button>
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert"
+        >
+          <div *ngIf="email.errors?.['required']">Email is required.</div>
+          <div *ngIf="email.errors?.['email']">Invalid Email Format</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <hr />
+  <div class="rights">© 2024, Furino. All rights reserved.</div>
+</footer>

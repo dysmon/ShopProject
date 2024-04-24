@@ -1,0 +1,79 @@
+:host {
+  align-items: center;
+  display: flex;
+  height: 100px;
+}
+
+.logo {
+  margin-left: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 185px;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 50px;
+  height: 32px;
+}
+
+.logo span {
+  margin-left: 5px;
+  color: #000;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  margin-left: 266px;
+  width: 430px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  margin-left: 200px;
+  height: 100px;
+  width: 410px;
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.buttons button {
+  margin-left: 45px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}

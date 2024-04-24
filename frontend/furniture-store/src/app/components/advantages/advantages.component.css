@@ -1,0 +1,36 @@
+.advantages {
+  background-color: #faf3ea;
+  padding: 100px 50px;
+  height: 270px;
+}
+
+.flex-wrapper {
+  display: flex;
+}
+
+.item {
+  width: 25%;
+}
+
+.advantages .item {
+  display: flex;
+  justify-content: center;
+}
+
+.item div {
+  margin-left: 10px;
+}
+
+.title {
+  color: #242424;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.title_descr {
+  color: #898989;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 150%;
+}

@@ -1,0 +1,47 @@
+<section class="current-page">
+  <img src="../../../assets/logo2.svg" alt="logo" />
+  <h1>Cart</h1>
+  <h2>Home &gt; Cart</h2>
+</section>
+
+<section class="cart">
+  <div>
+    <div class="thead">
+      <div>Product</div>
+      <div>Price</div>
+      <div>Quantity</div>
+      <div>Subtotal</div>
+    </div>
+    <div class="products" *ngFor="let item of storage">
+      <img [src]="item.front_image" alt="image" width="100px" height="100px" />
+      <div class="name">{{ item.name }}</div>
+      <div class="price">{{ item.price }}</div>
+      <div class="quantity">
+        <input
+          type="number"
+          onkeydown="return event.keyCode !== 69 && event.keyCode !== 189"
+          [(ngModel)]="quantity[item.id]"
+          (ngModelChange)="
+            calculateSubtotal(item.id, item.price); calculateTotal()
+          "
+          min="1"
+          oninput="this.value = Math.abs(this.value)"
+        />
+      </div>
+      <div class="subtotal">{{ calculateSubtotal(item.id, item.price) }}</div>
+      <img
+        (click)="deleteItemFromSession(item.id)"
+        class="bin"
+        src="../../../assets/delete.svg"
+        alt="delete"
+      />
+    </div>
+  </div>
+  <div class="totals">
+    <div class="title">Cart Totals</div>
+    <div class="total">
+      TOTAL: <span>{{ calculateTotal() }}$</span>
+    </div>
+    <button class="checkout">Check Out</button>
+  </div>
+</section>

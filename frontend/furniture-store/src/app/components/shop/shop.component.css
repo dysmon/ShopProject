@@ -1,0 +1,96 @@
+.shop .current-page {
+  background: url(../../../assets/shop_bg.jpg) center center/cover no-repeat;
+  height: 316px;
+  color: #000;
+  padding-top: 60px;
+}
+
+.current-page img {
+  display: block;
+  margin: 0 auto;
+}
+.current-page h1 {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.current-page h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.furniture {
+  padding: 63px 50px 63px 50px;
+}
+
+.item {
+  width: 285px;
+}
+
+.item .name {
+  color: #3a3a3a;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.item .descr {
+  margin-top: 8px;
+  color: #898989;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.price {
+  margin-top: 8px;
+}
+
+.price .new {
+  color: #3a3a3a;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.price .old {
+  margin-left: 16px;
+  color: #b0b0b0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  text-decoration-line: line-through;
+}
+
+.item .body {
+  padding: 16px;
+  height: 145px;
+  background-color: #f4f5f7;
+}
+
+.item img {
+  display: block;
+  width: 285px;
+  height: 301px;
+}
+
+.item .body:hover {
+  cursor: pointer;
+  background-color: #faf3ea;
+}
+
+.item img:hover {
+  cursor: pointer;
+}
+
+.item img:hover + .body {
+  background-color: #faf3ea;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 70px;
+}

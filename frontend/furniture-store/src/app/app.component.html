@@ -1,0 +1,26 @@
+<div class="container">
+  @defer {
+  <ng-container *ngIf="logged; else loginSection">
+    <app-header (exitClicked)="logout()"></app-header>
+
+    <router-outlet></router-outlet>
+
+    <app-advantages></app-advantages>
+
+    <app-footer></app-footer>
+  </ng-container>
+  }
+  <ng-template #loginSection class="ng-container">
+    <div class="login-form">
+      <fieldset>
+        <label for="username">Username: </label>
+        <input type="text" id="username" [(ngModel)]="username" />
+      </fieldset>
+      <fieldset>
+        <label for="password">Password: </label>
+        <input type="password" id="password" [(ngModel)]="password" />
+      </fieldset>
+      <button (click)="login()">Login</button>
+    </div>
+  </ng-template>
+</div>

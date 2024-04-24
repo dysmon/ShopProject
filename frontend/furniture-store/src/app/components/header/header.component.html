@@ -1,0 +1,22 @@
+<div class="logo" routerLink="/">
+  <img src="../../../assets/Logo.svg" alt="logo" />
+  <span>Furniro</span>
+</div>
+<nav>
+  <ul>
+    <li><a [routerLink]="['/home']">Home</a></li>
+    <li><a [routerLink]="['/furniture']">Shop</a></li>
+    <li><a [routerLink]="['/about']">About</a></li>
+    <li><a [routerLink]="['/contact']">Contact</a></li>
+  </ul>
+  <div class="buttons">
+    <button (click)="exit()">
+      <img src="../../../assets/account-exit.png" alt="alert" width="35px" />
+    </button>
+    <button><img src="../../../assets/search.svg" alt="search" /></button>
+    <button><img src="../../../assets/heart.svg" alt="like" /></button>
+    <button routerLink="/cart">
+      <img src="../../../assets/cart.svg" alt="cart" />
+    </button>
+  </div>
+</nav>

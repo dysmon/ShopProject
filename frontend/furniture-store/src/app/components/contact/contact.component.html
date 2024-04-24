@@ -1,0 +1,125 @@
+<div class="contact">
+  <section class="current-page">
+    <img src="../../../assets/logo2.svg" alt="logo" />
+    <h1>Contact</h1>
+    <h2>Home &gt; Contact</h2>
+  </section>
+  <section class="service">
+    <h1 class="title">Get In Touch With Us</h1>
+    <h2 class="title_descr">
+      For More Information About Our Product & Services. Please Feel Free To
+      Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not
+      Hesitate!
+    </h2>
+    <div class="flex-wrapper">
+      <div class="flex-item-1">
+        <div class="address">
+          <img src="../../../assets/contact/vector.svg" alt="address" />
+          <div>
+            <h3>Address</h3>
+            <p>236 5th SE Avenue, New York NY10000, United States</p>
+          </div>
+        </div>
+        <div class="phone">
+          <img src="../../../assets/contact/bxs_phone.svg" alt="phone" />
+          <div>
+            <h3>Phone</h3>
+            <p>
+              Mobile: +(84) 546-6789 <br />
+              Hotline: +(84) 456-6789
+            </p>
+          </div>
+        </div>
+        <div class="worktime">
+          <img src="../../../assets/contact/bi_clock-fill.svg" alt="Worktime" />
+          <div>
+            <h3>Working Time</h3>
+            <p>
+              Monday-Friday: 9:00 - 22:00 <br />
+              Saturday-Sunday: 9:00 - 21:00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-item-2">
+        <form #contactForm="ngForm" (ngSubmit)="sendMessage(formData)">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            name="name"
+            required
+            minlength="4"
+            placeholder="John"
+            [(ngModel)]="formData.name"
+            #name="ngModel"
+          />
+          <div
+            *ngIf="name.invalid && (name.dirty || name.touched)"
+            class="alert"
+          >
+            <div *ngIf="name.errors?.['required']">Name is required.</div>
+            <div *ngIf="name.errors?.['minlength']">
+              Name must be at least 4 characters long.
+            </div>
+          </div>
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            name="email"
+            required
+            ngModel
+            email="true"
+            placeholder="example@gmail.com"
+            [(ngModel)]="formData.email"
+            #email="ngModel"
+          />
+          <div
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="alert"
+          >
+            <div *ngIf="email.errors?.['required']">Email is required.</div>
+            <div *ngIf="email.errors?.['email']">Invalid Email Format</div>
+          </div>
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            placeholder="Delivery, Payment etc"
+            [(ngModel)]="formData.subject"
+            #subject="ngModel"
+          />
+          <div
+            *ngIf="subject.invalid && (subject.dirty || subject.touched)"
+            class="alert"
+          >
+            <div *ngIf="subject.errors?.['required']">Subject is required.</div>
+          </div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Hi! i’d like to ask about"
+            [(ngModel)]="formData.message"
+            #message="ngModel"
+          ></textarea>
+          <div
+            *ngIf="message.invalid && (message.dirty || message.touched)"
+            class="alert"
+          >
+            <div *ngIf="message.errors?.['required']">Message is required.</div>
+          </div>
+          <button
+            type="submit"
+            [disabled]="contactForm.invalid"
+          >
+            Submit
+          </button>
+          
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
